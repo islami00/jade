@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+2&family=Pacifico&display=swap');
+body{
+  font-family: 'M PLUS 2', sans-serif;
+}
+.navbar{
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  margin:0 auto;
+  border-bottom: 1px solid white;
+}
+.navbar h1{
+  color:black;
+}
+.navbar .links{
+  margin-left: auto;
+  font-size: 20px;
+}
+.navbar a{
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+.navbar a:hover{
+  color: blueviolet;
+}
+.kade{
+  float: right;
+  margin-right: 1.7em;
+}
+.dropdowns{
+  margin-bottom: 1em;
+}
+.verified{
+  margin-left: 1em;
+}
+.pending{
+  margin-left: 1em;
+}
+.searchbar{
+  margin-left: 1em;
+}
+.sidebar{
+  float: left;
+}
+.sidbr{
+  text-align: center;
+  padding-left: 1em;
+}
+.sidbr2{
+  text-align: left;
+  padding: 1.5em;
+  padding-left: 3em;
+  padding-right: 3.5em;
+}
+.reviews{padding: 1em;}
+.total{padding: 1em;}
+.staking{padding: 1em;}
+.points{padding: 1em;}
