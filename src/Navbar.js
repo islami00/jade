@@ -8,7 +8,7 @@ const Navbar= () =>{
             <nav className="links">
                 <Button> About</Button>
                 <Button>Team</Button>
-                <Button color="violet">Projects</Button>
+                <Button color="purple">Projects</Button>
                 <Button>CHOC token</Button>
             </nav>
         </div>

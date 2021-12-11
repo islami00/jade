@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+2&family=Pacifico&display=swap');
 body{
   font-family: 'M PLUS 2', sans-serif;
+  min-width: 500px;
 }
 .navbar{
   padding: 20px;
@@ -40,9 +41,6 @@ body{
 .searchbar{
   margin-left: 1em;
 }
-.sidebar{
-  float: left;
-}
 .sidbr{
   text-align: center;
   padding-left: 1em;
@@ -57,3 +55,13 @@ body{
 .total{padding: 1em;}
 .staking{padding: 1em;}
 .points{padding: 1em;}
+.cardlist{
+  height: 500px;
+  overflow-y: scroll;
+}
+.dd1{
+  max-width: 200px;
+}
+.table{
+  float: right;
+}

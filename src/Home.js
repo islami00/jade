@@ -1,15 +1,15 @@
-import { Card, Container, Dropdown,Input, Button, Checkbox } from "semantic-ui-react";
+import {Container, Dropdown,Input, Button, Checkbox,Table, Accordion } from "semantic-ui-react";
 const Home=()=>{
 const options=[
         { key: 1, text: 'idk', value: 1 },
         { key: 2, text: 'idk', value: 2 },
         { key: 3, text: 'idk', value: 3 },
-    ]  
+]
     return(
         <div className="kade">
             <Container fluid>
                 <div className="dropdowns">
-                <Button.Group className="kade2" color="violet">
+                <Button.Group className="kade2" color="purple">
                     <Button>Filter by project</Button>
                     <Dropdown
                           className='button icon'
@@ -39,15 +39,43 @@ const options=[
          placeholder='Search for project'
           />
                 </div>
-              <Card.Group>
-    <Card fluid color='violet' header='Polkadot' />
-    <Card fluid color='violet' header='Kusama' />
-    <Card fluid color='violet' header='Kusama' />
-    <Card fluid color='violet' header='Acala' />
-    <Card fluid color='violet' header='Astar' />
-    <Card fluid color='violet' header='Phala' />
-    <Card fluid color='violet' header='Kusama' />
-  </Card.Group>
+                <div className="table">
+                    <Table striped selectable style={{width:900, height:500}}>
+            <Table.Body>
+                <Table.Row>
+                    <Table.Cell>Polkadot
+                          <p>lorem ipsum dolor</p>
+                    </Table.Cell>
+                </Table.Row>
+                <Table.Row>
+                <Table.Cell>Kusama
+                <p>lorem ipsum dolor </p>
+                </Table.Cell>
+                </Table.Row>
+                <Table.Row>
+                <Table.Cell>Kusama
+                <p>lorem ipsum dolor </p>
+                </Table.Cell>
+                </Table.Row>
+                <Table.Row>
+                <Table.Cell>Polkadot
+                <p>lorem ipsum dolor </p>
+
+                </Table.Cell>
+                </Table.Row>
+                <Table.Row>
+                <Table.Cell>Akala
+                <p>lorem ipsum dolor </p>
+                </Table.Cell>
+                </Table.Row>
+                <Table.Row>
+                <Table.Cell>Chocolate
+                <p>lorem ipsum dolor </p>
+                </Table.Cell>
+                </Table.Row>
+            </Table.Body>
+        </Table>
+        </div>
   </Container>
         </div>
     );
