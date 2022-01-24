@@ -1,0 +1,131 @@
+@font-face {
+    font-family:north;
+    src: url(assets/northstar3d.otf);
+}
+@font-face {
+    font-family:a Asian Ninja;
+    src: url(assets/asianninja.otf);
+}
+body{
+    background: white;
+    max-height: 1080px;
+}
+.nav-list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-size: 17px;
+    font-family: north;
+    padding-bottom: 1em;
+}
+li {
+    float:left;
+}
+li a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+}
+li a:hover{
+    color: white;
+    background-color: black;
+}
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:300px;
+}
+.hideout{
+    height: auto;
+    width: 250px;
+    float: right;
+}
+.container{
+    text-align: right;
+}
+.newb-text{
+    padding: 0.5em;
+    color: black;
+}
+.rev1{
+    border-radius: 50%;
+    background-color:grey;
+    padding: 0.7em;
+    transform: rotate(0deg) translateX(150px) rotate(-0deg);
+    position: absolute;
+    -webkit-animation: orbit2 8s linear infinite; /* Chrome, Safari 5 */
+    -moz-animation: orbit2 8s linear infinite; /* Firefox 5-15 */
+    -o-animation: orbit2 8s linear infinite; /* Opera 12+ */
+    animation: orbit2 8s linear infinite; /* Chrome, Firefox 16+, 
+                                                  IE 10+, Safari 5 */
+}
+.rev2{
+    border-radius: 50%;
+    background-color:grey;
+    padding: 0.7em;
+    transform: rotate(72deg) translateX(150px) rotate(-72deg);
+    position: absolute;
+    -webkit-animation: orbit2 7.75s linear infinite; /* Chrome, Safari 5 */
+    -moz-animation: orbit2 7.75s linear infinite; /* Firefox 5-15 */
+    -o-animation: orbit2 7.75s linear infinite; /* Opera 12+ */
+    animation: orbit2 7.75s linear infinite; /* Chrome, Firefox 16+, 
+                                                  IE 10+, Safari 5 */
+}
+.rev3{
+    border-radius: 50%;
+    background-color:grey;
+    padding: 0.7em;
+    position: absolute;
+    transform: rotate(144deg) translateX(150px) rotate(-144deg);
+    -webkit-animation: orbit2 7.5s linear infinite; /* Chrome, Safari 5 */
+    -moz-animation: orbit2 7.5s linear infinite; /* Firefox 5-15 */
+    -o-animation: orbit2 7.5s linear infinite; /* Opera 12+ */
+    animation: orbit2 7.5s linear infinite; /* Chrome, Firefox 16+, 
+                                                  IE 10+, Safari 5 */
+}
+.rev4{
+    border-radius: 50%;
+    background-color:grey;
+    padding: 0.7em;
+    position: absolute;
+    transform: rotate(216deg) translateX(150px) rotate(-216deg);
+    -webkit-animation: orbit2 7.25s linear infinite; /* Chrome, Safari 5 */
+    -moz-animation: orbit2 7.25s linear infinite; /* Firefox 5-15 */
+    -o-animation: orbit2 7.25s linear infinite; /* Opera 12+ */
+    animation: orbit2 7.25s linear infinite; /* Chrome, Firefox 16+, 
+                                                  IE 10+, Safari 5 */
+}
+.rev5{
+    border-radius: 50%;
+    background-color:grey;
+    padding: 0.7em;
+    position: absolute;
+    transform: rotate(288eg) translateX(150px) rotate(-288deg);
+    -webkit-animation: orbit2 7s linear infinite; /* Chrome, Safari 5 */
+    -moz-animation: orbit2 7s linear infinite; /* Firefox 5-15 */
+    -o-animation: orbit2 7s linear infinite; /* Opera 12+ */
+    animation: orbit2 7s linear infinite; /* Chrome, Firefox 16+, 
+                                                  IE 10+, Safari 5 */
+}
+@-webkit-keyframes orbit2 {
+	from { 	-webkit-transform: rotate(0deg) translateX(150px) rotate(0deg); }
+	to   {  -webkit-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+@-moz-keyframes orbit2 {
+	from { 	-moz-transform: rotate(0deg) translateX(150px) rotate(0deg); }
+	to   {  -moz-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+@-o-keyframes orbit2 {
+	from { 	-o-transform: rotate(0deg) translateX(150px) rotate(0deg); }
+	to   {  -o-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+@keyframes orbit2 {
+	from { 	transform: rotate(0deg) translateX(150px) rotate(0deg); }
+	to   {  transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
