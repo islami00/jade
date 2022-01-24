@@ -9,6 +9,8 @@
 body {
   background: white;
   max-height: 1080px;
+  /* Replace this at the nearest parent */
+  --onePcent: 2px;
 }
 .nav-list {
   list-style-type: none;
@@ -33,11 +35,16 @@ li a:hover {
   background-color: black;
 }
 .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* Yeah, this is a hack. Rotate the star instead */
+  justify-content: center;
+  /* Okay, transformX is for half the container. So, 50% nice */
   width: 300px;
+  height: 300px;
 }
+
 .hideout {
   height: auto;
   width: 250px;
@@ -51,19 +58,33 @@ li a:hover {
   padding: 0.5em;
   color: black;
 }
+/* Rotation is fully based on parent with onePcent and transform-origin. Let's try one more thing */
 .rev1 {
   border-radius: 50%;
   background-color: grey;
   padding: 0.7em;
-  /* This rotation code is okay. The main issue would lie in changing the center of rotation */
-  transform: rotate(0deg) translateX(150px);
+  transform-origin: center;
+  /* This initial transform is to move it toward the edge. Alignment will fix this. */
+  transform: rotate(0deg) translateX(calc(50 * var(--onePcent)));
   /* Positioning can be fixed later */
   position: absolute;
   animation: orbit2 8s linear infinite;
-  animation-delay: calc(var(--order) * 0.5s);
+  /* This intial delay messes things up */
+  /* Any new entry should fold in */
+  /* 1.6  * 5 /  totalNumber */
+  /* Magic number 8 / n */
+  animation-delay: calc(var(--order) * 1.6s);
+  /* Mathematical problem: x circles are rotating about an axis, at the same velocity , how can you create even space between them by just delaying departure*/
   /*timing can be adjusted so that it is well-spaced. But I feel like rotation and spacing should be different*/
   /* I.e each should have its own */
   /* First, remove all these vendor prefixes */
+}
+.center > * {
+  /* animation-play-state: paused; */
+}
+.center.pause > * {
+  /* vender pre will be added by postcss */
+  animation-play-state: paused;
 }
 /* The animation itself is okay, the problem here is that spacing is determined by the transform */
 /* Decoupling those two would bring out the power of the transform */
@@ -71,9 +92,10 @@ li a:hover {
 /* The translate is also crucial in defining a new center of rotation, wb transform-origin?? */
 @keyframes orbit2 {
   from {
-    transform: rotate(0deg) translateX(150px);
+    /* These keep it at the edge */
+    transform: rotate(0deg) translateX(calc(50 * var(--onePcent)));
   }
   to {
-    transform: rotate(360deg) translateX(150px) rotate(-360deg); /*The minus 360 helps avoid the images flipping head over heels*/
+    transform: rotate(360deg) translateX(calc(50 * var(--onePcent))) rotate(-360deg); /*The minus 360 helps avoid the images flipping head over heels*/
   }
 }
