@@ -43,9 +43,11 @@ li a:hover {
   /* Okay, transformX is for half the container. So, 50% nice */
   width: 300px;
   height: 300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.hideout {
+.ninja {
   height: auto;
   width: 250px;
   float: right;
